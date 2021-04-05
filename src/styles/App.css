@@ -1,0 +1,296 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-image: url("/geoffrey-ernault-candywater.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+  position: relative;
+  height: 100vh;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  min-height: 32px;
+  min-width: 80px;
+  padding: 4px 8px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+input[type="checkbox"] {
+  width: 24px;
+  min-height: 24px;
+  margin: 0 5px 0 8px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  clip-path: polygon(
+    0% 20%,
+    20% 20%,
+    20% 0%,
+    80% 0%,
+    80% 20%,
+    100% 20%,
+    100% 80%,
+    80% 80%,
+    80% 100%,
+    20% 100%,
+    20% 80%,
+    0% 80%
+  );
+}
+
+input[type="checkbox"]:focus {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+input {
+  min-height: 36px;
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  padding: 0 12px;
+  box-shadow: 3px 1px 4px 0px rgb(0 0 0 / 20%);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input:focus {
+  box-shadow: 1px 0 9px rgba(0, 0, 0, 0.25);
+}
+
+.Error_message {
+  text-align: center !important;
+  color: red !important;
+  font-weight: 100 !important;
+}
+
+.Form__sign_in {
+  position: absolute;
+  top: 50%;
+  background: #ffffff5c;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  width: 400px;
+  height: min-content;
+  padding: 24px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.09), 3px 2px 3px rgba(0, 0, 0, 0.05);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.Form__sign_in .Form__header {
+  font-size: 2em;
+  font-weight: 600;
+  padding-bottom: 20px;
+  display: block;
+  color: #000000bf;
+}
+
+.Form__sign_in label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: 500;
+  color: #000000bf;
+  margin: 5px 0;
+}
+
+.Form__sign_in .Form__note {
+  font-size: 12px;
+  font-style: oblique;
+  cursor: copy;
+}
+
+.ToDo__container {
+  position: absolute;
+  top: 50%;
+  background: #ffffff5c;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  width: 500px;
+  height: min-content;
+  padding: 24px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.09), 3px 2px 3px rgba(0, 0, 0, 0.05);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.Todo__creation {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.Todo__input {
+  flex: 1 1;
+}
+
+.ToDo__header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 1rem;
+}
+
+.ToDo__header > label {
+  font-weight: 600;
+}
+
+.ToDo__header > label > .all {
+  color: #5686d8;
+}
+
+.ToDo__header > label > .active {
+  color: #b188c4;
+}
+
+.ToDo__header > label > .completed {
+  color: #78404a;
+}
+
+.ToDo__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  max-height: 280px;
+  overflow: auto;
+}
+
+.ToDo__item {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffffa1;
+  border: 1px solid #b7b7b7;
+  margin: 5px;
+  padding: 0 5px;
+}
+
+.ToDo__item .Todo__input {
+  margin: 5px 0;
+  min-height: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.ToDo__item > span {
+  flex: 1 1;
+  text-align: left;
+  margin-left: 8px;
+  line-height: 44px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.ToDo__item > span.completed {
+  text-decoration: line-through;
+  color: #f90000;
+}
+
+.Todo__content {
+  flex: 1 1;
+}
+
+.Todo__delete {
+  outline: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  min-width: auto;
+  min-height: auto;
+  box-shadow: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Todo__action,
+.Todo__delete {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+  background: #f90000;
+  color: white;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.Todo__toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.Todo__tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.Todo__tabs > *:not(:last-child) {
+  margin-right: 8px;
+}
+
+.Action__btn {
+  background: #16a3b7;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    4% 71%,
+    76% 6%,
+    94% 6%,
+    76% 22%,
+    35% 23%,
+    0 100%,
+    100% 100%,
+    100% 0
+  );
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1bd; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.692); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 85, 85, 0.719); 
+}
